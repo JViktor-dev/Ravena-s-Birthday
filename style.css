@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+:root {
+    --cor0: #CBA7DE;
+    --cor1: #F5D3E7;
+    --cor2: #F4A8CC;
+    --cor3: #151515;
+    --cor4: #FFFFFF;
+    --cor5: #C4202C;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', 'cursive';
+    --fonte-android: 'Android', 'cursive';
+}
+/* reiniciar configuração global */
+*{
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+/* garantir que o html ou body tenha altura para o backgroud-image ser aplicado */
+
+
+body{
+background-image: linear-gradient(to bottom, #c39ad5, #ddb4d8, #f7cde4);
+}
+
+header{
+    text-shadow: 1px 1px 1px black;
+    color: var(--cor2);
+    font-size: 25px;
+    font-family: 'Great Vibes', cursive;
+    display: flex;
+    justify-content: center;  /* Alinha horizontalmente */
+    align-items: center;      /* Alinha verticalmente */
+    height: 100vh;            /* 100% da altura da tela */
+    margin: 0;
+    flex-direction: column;
+}
+
+header p {
+    font-size: 40px;
+    color: var(--cor5);
+
+}
+.imagem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza no meio da tela */
+    z-index: -1; /* Fica atrás do header */
+    width: 70%;
+    max-width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* impede que interfira em cliques */
+}
+
+
+main{
+    margin: 50px;
+}
+main h1{
+    white-space: nowrap;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(0.5rem, 4vw, 1.5rem)
+}
+main h2{
+    text-align: center;
+    font-family: 'Lora', cursive; 
+}
+
+main p{
+    text-align: justify;
+    font-family: 'Dancing Script', cursive;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+
+
+/* Efeito de slide da direita */
+.slide-right {
+    transform: translateX(100px);
+}
+.slide-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.show{
+    filter: blur(0px);
+    opacity: 1;
+        transform: translateX(-0%);
+    transition: all 0.5s;
+}
+.container {
+    display: flex;
+    flex-wrap: nowrap;       /* tudo na mesma linha, sem quebra */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* alinha verticalmente ao centro */
+    gap: 10px;               /* espaço entre os blocos */
+    width: 100%;             /* ocupa toda a largura do pai */
+    max-width: 800px;        /* limite máximo (ajuste se quiser) */
+    margin: 0 auto;          /* centraliza container na página */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.blocos {
+    color: var(--cor5);
+    flex: 1 1 0;             /* cresce e encolhe igualmente, tamanho base 0 */
+    min-width: 40px;         /* tamanho mínimo para não sumir */
+    max-width: 100px;        /* limite máximo para cada bloco */
+    background-color: var(--cor3); /* cor de fundo para destacar */
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    user-select: none;
+}
+
+
+/* Para telas muito pequenas, permite um pouco de quebra */
+@media (max-width: 400px) {
+  .container {
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+  .blocos {
+    flex: 1 1 30%;
+    min-width: 30px;
+    max-width: none;
+    margin-bottom: 8px;
+  }
+}
+
+
+.responsive-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.scale-container {
+    transform-origin: top center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Escala automática baseada na largura da tela */
+@media (max-width: 800px) {
+  .scale-container {
+    transform: scale(calc(100vw / 800));
+  }
+}
