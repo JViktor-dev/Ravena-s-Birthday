@@ -61,3 +61,16 @@ atualizarTempo();
 
 // Depois atualiza a cada 50ms para mostrar o milissegundo quase em tempo real
 setInterval(atualizarTempo, 50);
+
+// Rodar a musica ao clicar
+const btnMusica = document.getElementById('btnMusica')
+const audio = document.getElementById('musica');
+const paragrafoEscondido = document.getElementById('depoisMusica');
+btnMusica.addEventListener('click', ()=> {
+  audio.play();
+  audio.currentTime = 14;
+  audio.volume = 0.1;
+  paragrafoEscondido.classList.remove('escondido');
+  paragrafoEscondido.classList.add('mostrarp')
+  btnMusica.classList.add('escondido')
+})
