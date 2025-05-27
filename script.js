@@ -74,3 +74,7 @@ btnMusica.addEventListener('click', ()=> {
   paragrafoEscondido.classList.add('mostrarp')
   btnMusica.classList.add('escondido')
 })
+
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
