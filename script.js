@@ -56,10 +56,10 @@ function atualizarTempo() {
   document.getElementById('milissegundos').textContent = tempo.milissegundos.toString().padStart(3, '0'); // 3 dígitos
 }
 
-// Atualiza IMEDIATAMENTE ao carregar a página
+
 atualizarTempo();
 
-// Depois atualiza a cada 50ms para mostrar o milissegundo quase em tempo real
+
 setInterval(atualizarTempo, 50);
 
 // Rodar a musica ao clicar
@@ -78,3 +78,33 @@ btnMusica.addEventListener('click', ()=> {
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   };
+
+  // trocar img pra video para as memorias:
+  function trocarParaVideo() {
+  audio.pause();           
+      
+  const container = document.getElementById('mediaContainer');
+  
+  // Cria o vídeo
+  const video = document.createElement('video');
+  video.src = '/videos/Videomemory.mp4'; // seu vídeo aqui
+  video.autoplay = true;
+  video.controls = false;
+
+  // Quando o vídeo terminar, volta a imagem
+  video.addEventListener('ended', () => {
+    const img = document.createElement('img');
+    img.src = 'fotos/silentHill.png';
+    img.alt = 'Silent Hill';
+    container.innerHTML = ''; // limpa o vídeo
+    container.appendChild(img);
+    if(audio.currentTime > 14){
+      audio.play()
+    } 
+  });
+
+  // Substitui a imagem pelo vídeo
+  container.innerHTML = ''; 
+  container.appendChild(video);
+  
+}

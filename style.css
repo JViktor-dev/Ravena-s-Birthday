@@ -9,7 +9,7 @@
     --cor3: #151515;
     --cor4: #FFFFFF;
     --cor5: #C4202C;
-
+    --corDestaque: #0092d6;
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte-destaque: 'Bebas Neue', 'cursive';
     --fonte-android: 'Android', 'cursive';
@@ -112,6 +112,9 @@ main p{
     text-align: justify;
     font-family: var(--fonte-fofa)
 }
+main{
+    overflow: hidden;
+}
 .temporizador{
     padding-top: 40px;
 }
@@ -130,6 +133,15 @@ main p{
 .slide-right.show {
     opacity: 1;
     transform: translateX(0);
+}
+
+.slide-fundo {
+    opacity: 0;
+    transform: scale(0.5);
+}
+.slide-fundo.show {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .show{
@@ -229,15 +241,123 @@ main p{
 }
 
 .versoes{
-    margin-top: 50px;
+    margin: 50px auto 0 auto; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 400px;
+
 }
 .prVersoes{
+    
     color: var(--cor5);
     font-weight: bold;
     font-style: italic;
     font-size: 25px;
+}
+
+
+
+.scSeta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Se quiser alinhar em linha, flex-direction: row é padrão */
+}
+
+.setaBaixo {
+    animation: pular 1s infinite;
+    width: 100px; /* largura "original" da seta antes da rotação */
+    height: 100px; /* altura "original" da seta antes da rotação */
+    transform: rotate(90deg);
+    /* Para que o elemento rotacionado não "extrapole" o espaço, pode usar */
+    transform-origin: center center;
+    /* Ou ajustar se precisar */
+}
+.videoInterativo{
+    max-width: 400px;
+    margin-top: 20px;
+}
+.botaomudar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content:center ;
+}
+
+.botaoMemory {
+  all: unset;
+  display: inline-block;
+  font-family: 'Dancing Script', cursive;
+  padding: 10px;
+  color: var(--cor5);
+  background-color: #000000;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.botaoMemory:hover {
+  background-color: var(--cor2);
+}
+.botaoMemory:active {
+  background-color: var(--cor5);
+  color: var(--cor3);
+}
+
+#depoisMusica{
+    margin-top: 10px;
+}
+
+@keyframes pular {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.p2{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--cor5);
+}
+.memorys{
+    background: var(--cor3);
+    border-radius: 20px 20px 0px 0px;
+    padding: 10px;
+}
+
+.finalizando{
+    background-color: var(--cor3);
+    border-radius: 0px 0px 20px 20px;
+}
+.titulofinal{
+    color: var(--cor2);
+    margin: 20px;
+}
+.finalizando > p {
+    margin: 20px;
+    color: var(--cor2);
+}
+
+footer{
+    padding: 10px;
+    background-color: var(--cor5);
+}
+
+footer p{
+    font-weight: bolder;
+    text-align: center;
+    color: black;
+}
+.destaque{
+    color: var(--corDestaque);
+    text-decoration: underline;
+}
+.destaque1{
+    color: var(--cor5);
 }

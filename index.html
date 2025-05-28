@@ -19,12 +19,12 @@
         <p class="hidden">
             Feliz seus 15 aninhos!
         </p>
-        <div class="cxBtn">
+        <div class="cxBtn hidden slide-fundo">
           <input type="button" value="Aperte em mim" class="botaoMusica" id="btnMusica">
           <audio src="musica/CUCO - Lo Que Siento (Official Audio).mp3" id="musica" ></audio>
 
         </div>
-                  <p id="depoisMusica" class="escondido">
+                  <p id="depoisMusica" class="escondido ">
             Agora pode continuar!
           </p> 
     </header>
@@ -39,19 +39,19 @@
             Seu dia chegou, meu amor!
         </h2>
         <p class="hidden slide-right">
-            Neste dia tão especial, eu quero te dizer o quanto te amo.
-            Tudo o que vivemos até aqui me enche de orgulho — por tudo que suportamos, por tudo que ainda vamos enfrentar. E principalmente por você.
+            Neste dia <span class="destaque1">tão especial</span>, eu quero te dizer o quanto te amo.
+            Tudo o que vivemos até aqui me enche de <span class="destaque1">orgulho</span> — por tudo que suportamos, por tudo que ainda vamos enfrentar. E principalmente por você.
         </p class="hidden">
         <p class="hidden slide-right">
-            A sua força me encanta. Sua resistência, resiliência, persistência… cada uma dessas qualidades constrói quem você é. E é exatamente isso que te torna tão única.
+            A sua força me encanta. Sua <span class="destaque1">resistência, resiliência, persistência…</span> cada uma dessas qualidades constrói quem você é. E é exatamente isso que te torna tão única.
         </p>
             <p class="hidden">  
             Nosso começo foi “difícil”, é verdade — mas totalmente necessário.
-            Acho que nunca vi alguém insistir tanto em algo... ainda mais quando esse “algo” era eu.
+            Acho que nunca vi alguém <span class="destaque1">insistir</span> tanto em algo... ainda mais quando esse “algo” era <span class="destaque1">eu</span>.
             Você foi colocada à prova várias vezes. E, mesmo assim, superou tudo.
         </p>
         <p class="hidden slide-right">
-            Confesso: eu nunca teria acreditado que alguém mais jovem pudesse ter tamanha maturidade e determinação para fazer algo tão real — e tão complicado — dar certo.
+            Confesso: eu nunca teria acreditado que alguém mais jovem pudesse ter tamanha <span class="destaque1">maturidade</span> e <span class="destaque1">determinação</span> para fazer algo tão real — e tão complicado — <span class="destaque1">dar certo.</span>
         </p>
         <section class="temporizador">
           <h2 class="hidden">
@@ -84,18 +84,47 @@
             <p class="legenda">Milissegundos</p>
           </div>
           </div>
-        <div class="boxVideo">
+        <div class="boxVideo hidden slide-fundo">
           <p class="conteudoP">Nossas gameplays são algo que nunca vou esquecer. É uma lembrança tão boa, mas tão boa, que eu eternizaria.</p>
           <video class="video-bg" loop src="videos/discordvideo.mp4" autoplay preload="auto" muted></video>
         </div>
         <section class="versoes">
-          <p class="prVersoes">
+          <p class="prVersoes hidden slide-fundo" >
             Amo todas as nossas versões!
           </p>
-          <video autoplay muted loop class="video-bg" src="videos/versões.mp4"></video>
+          <video autoplay muted loop class="video-bg hidden slide-fundo" src="videos/versões.mp4"></video>
         </section>
-        
+        <section class="scSeta hidden slide-fundo">
+          <img src="fotos/seta-baixo.png" alt="seta para baixo" class="setaBaixo">
+        </section>
+        <section class="memorys hidden slide-fundo">
+          <div  class="p2 hidden slide-fundo">
+            <p >
+              Quer ver um pouco das nossas memorias?
+            </p>
+          </div>
+          <section class="videoInterativo boxVideo hidden slide-fundo" id="mediaContainer">
+            <img src="fotos/silentHill.png" alt="Silent Hill">
+          </section>
+          <div class="botaomudar hidden slide-fundo">
+          <input class="botaoMemory" type="button" value="Ativar Memorias!" onclick="trocarParaVideo()">
+        </section>
+        </div>
+        <section class="finalizando">
+          <h2 class="titulofinal">Aproveite seu dia bb!</h2>
+          <p class="Pfinal hidden slide-right" >
+            Infelizmente esse foi o máximo que consegui, mas pode ter certeza que eu dei meu <span class="destaque1">melhor</span>, e se eu pudesse, teria feito ainda melhor que isso, porquê <span class="destaque1">você merece</span>, minha princesa! seu aniversário não é um dia qualquer, e eu tive todo esse trabalho pra te mostrar isso, então se eu consegui mudar pelo menos um pouquinho esse seu pensamento, então já me valeu todo <span class="destaque1">esforço</span> que fiz, todo esforço que fiz por você. Ás vezes, posso parecer um pouco frio e distante, talvez minha forma de demonstrar seja diferente, porém <span class="destaque1">existe</span>, isso aqui é a prova disso!
+             <br>
+              E isso tudo que eu fiz é pra te provar que você vale totalmente apena, <span class="destaque1">eu te amo demais</span> e eu faria isso aqui varias e varias vezes novamente pra você, ainda mais se eu souber que você deu um <span class="destaque1">sorrisinho</span> vendo isso! porque é isso que eu mais quero.
+             <br>
+              Um dia todos esses dias jogando junto, toda essa distância, todas essas coisas que passamos juntos se tornará apenas uma <span class="destaque1">memória</span> da nossa vivência, algo que poderemos dizer aos nossos filhos do que passamos.
+              <br> Ter você é a mais pura felicidade que alguém poderia ter.
+          </p>
+        </section>
     </main>
+    <footer>
+      <p>Site criado por <span class="destaque">&copy;Viktor</span> para <span class="destaque">Ravenax</span></p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
