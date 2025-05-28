@@ -87,7 +87,7 @@ btnMusica.addEventListener('click', ()=> {
   
   // Cria o vídeo
   const video = document.createElement('video');
-  video.src = '/videos/Videomemory.mp4'; // seu vídeo aqui
+  video.src = '/videos/videomemory.mp4'; // seu vídeo aqui
   video.autoplay = true;
   video.controls = false;
 
