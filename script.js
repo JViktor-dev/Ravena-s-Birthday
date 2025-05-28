@@ -99,6 +99,7 @@ btnMusica.addEventListener('click', ()=> {
     img.alt = 'Silent Hill';
     container.innerHTML = ''; // limpa o vídeo
     container.appendChild(img);
+    inmyhead.pause()
     if(audio.currentTime > 14){
       audio.play()
     } 
@@ -115,7 +116,4 @@ btnMy.addEventListener('click', ()=>{
   inmyhead.play()
   console.log(inmyhead);
   inmyhead.currentTime = '29'
-  setInterval(() => {
-    inmyhead.pause()
-  }, 13000);
 })
