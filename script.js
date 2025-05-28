@@ -87,7 +87,8 @@ btnMusica.addEventListener('click', ()=> {
   
   // Cria o vídeo
   const video = document.createElement('video');
-  video.src = 'videos/videomemory.mp4'; // seu vídeo aqui
+  video.src = 'videos/videomemory.mp4'; 
+  video.muted = true; 
   video.autoplay = true;
   video.controls = false;
 
@@ -108,3 +109,13 @@ btnMusica.addEventListener('click', ()=> {
   container.appendChild(video);
   
 }
+const btnMy = document.getElementById('musicmemory');
+const inmyhead = document.getElementById('inmyhead');
+btnMy.addEventListener('click', ()=>{
+  inmyhead.play()
+  console.log(inmyhead);
+  inmyhead.currentTime = '29'
+  setInterval(() => {
+    inmyhead.pause()
+  }, 13000);
+})
